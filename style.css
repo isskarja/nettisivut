@@ -1,0 +1,309 @@
+body {
+  background-color: hsl(249, 27%, 14%);
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: hsl(249, 27%, 14%);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* mobiilissa */
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* UUSI: koko sivun grid-layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px 20px;
+  box-shadow: 2px 0 20px rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.sidebar img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #dabfff;
+}
+
+.sidebar p {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 6px 0;
+  text-align: center;
+}
+
+.sidebar a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #dabfff;
+  color: #1a1a2e;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #b79ff9;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #dabfff;
+  text-decoration: underline;
+}
+
+/* SISÄLTÖALUE */
+.cv-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #e7ddf6;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  font-size: 22px;
+  text-shadow: 0 0 4px #dabfff;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.job, .education {
+  margin-bottom: 20px;
+  color: #eaf3ff;
+  font-size: 18px;
+}
+
+.job h3, .education h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.job span, .education span {
+  display: block;
+  font-size: 0.9em;
+  color: #cccc;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "⚪ ";
+  color: #dabfff;
+  margin-right: 6px;
+}
+
+ul li {
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+/* YHTEYDEN OLEMUS */
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(218, 191, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: auto;
+}
+
+.contact-form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #dabfff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #eee;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(238, 221, 254);
+  color: black;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group button {
+  background-color: #dabfff;
+  color: #1a1a2e;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.form-group button:hover {
+  background-color: #b79ff9;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #dabfff;
+}
+
+/* RESPONSIV */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .cv-container {
+    padding: 15px;
+  }
+
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .sidebar img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .cv-container {
+    padding: 20px;
+  }
+}
